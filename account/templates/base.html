@@ -1,0 +1,32 @@
+{% load bootstrap3 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% if title %}
+  <title>Netflix - {{title}}</title>
+  {% else %}
+    <title> Netflix -Watch TV shows online, Watch Movies Online </title>
+  {% endif %}
+
+  {% block styles %}
+    {% bootstrap_css %}
+    <link href="{% static 'fontawesome_free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  {% endblock %}
+</head>
+<body>
+  {% block content %}
+  {% endblock %}
+
+  {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'fontawesome_free/js/all.min.js' %}"></script>
+    {% bootstrap_javascript %}
+  {% endblock %}
+</body>
+</html>

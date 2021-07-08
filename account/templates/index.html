@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block content %}
+{{block.super}}
+
+<header class="showcase">
+  <div class="showcase-top">
+    <img src="{% static 'photos/blacklogo.png' %}" id="logo">
+    <div class="showcase-top-right">
+      <button class="btn dropdown-toggle" type="button" id="dropdownlanguagebtn" data-toggle="dropdown">
+        <i class="fas fa-globe"></i>Language<i class="fas fa-caret-down"></i></i>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownlanguagebtn">
+        <a class="dropdown-item" href="">English</a>
+        <a class="dropdown-item" href="">Swahili</a>
+        <a class="dropdown-item" href="">French</a>
+      </div>
+      <button class="btn" id="signup">Sign Up</button>
+    </div>
+  </div>
+  <div class="showcase-content">
+    <h1 class="showcase-title">Unlimited movies, TV shows, and more.</h1>
+    <h5> Watch anywhere. Cancel anytime </h5>
+    <p>Ready to watch? Enter your email to create or restart your membership</p>
+    <form class="form-inline" id="getstarted-form">
+      <input type="email" id="email-input" placeholder="Email Address">
+      <button class="btn" id="get-started">Get Started<i class="fas fa-chevron-right"></i></button>
+    </form>
+  </div>
+</header>
+<div class="container" id="horizantal-line"></div>
+<div class="row" id="watch-on-tv">
+  <div class="col-md-6" id="animation-card">
+    <h1>Enjoy on your TV</h1>
+    <h2 id="animation-text">Watch on Smart TVs,Playstation,Xbox,Chromecast,Apple,Blu-ray players,and more.</h2>
+  </div>
+  <div class="col-md-6" id="animation-image">
+    <img src="static/photos/home-tv.jpg">
+  </div>
+</div>
+<div class="container" id="horizantal-line"></div>
+<div class="row" id="download-progs">
+  <div class="col-md-5">
+    <img src="../static/photos/infoimage.jpg" alt="" id="image-progs">
+  </div>
+  <div class="col-md-6" >
+    <h1 id="h1-offline">Download your shows to watch offline.</h1>
+    <h2 id="animation-text">Save your favorites easily and always have something to watch</h2>
+  </div>
+</div>
+<div class="container" id="horizantal-line"></div>
+<div class="row" id="watch-on-tv">
+  <div class="col-md-6" id="animation">
+    <h1>Watch everywhere</h1>
+    <h2 id="animation-text">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</h2>
+  </div>
+</div>
+<div class="container" id="horizantal-line"></div>
+<div class="row" id="kids-progs">
+  <div class="col-md-5">
+    <img src="../static/photos/kids.png" alt="" id="kids-image">
+  </div>
+  <div class="col-md-6" id="kids-profile">
+    <h1 id="h1-offline">Create profile for kids.</h1>
+    <h2 id="animation-text">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</h2>
+  </div>
+</div>
+<div class="container" id="horizantal-line"></div>
+
+{% endblock %}
